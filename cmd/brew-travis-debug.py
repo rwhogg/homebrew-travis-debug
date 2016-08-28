@@ -19,4 +19,4 @@ my_image_tag = "rwhogg/homebrew-travis-debug";
 subprocess.call([docker, "build", ".", "-t", my_image_tag]);
 
 # FIXME: the command is WRONG
-subprocess.call([docker, "run", "-it", "/bin/bash");
+subprocess.call([docker, "run", "-it", my_image_tag, "/bin/bash"]);
