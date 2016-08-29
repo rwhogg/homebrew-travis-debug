@@ -1,2 +1,2 @@
-FROM quay.io/travisci/travis-ruby;
+FROM quay.io/travisci/travis-ruby
 
