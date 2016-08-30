@@ -13,7 +13,7 @@ import sys;
 
 developer = "rwhogg";
 repo_name = "homebrew-travis-debug";
-repo_full_name = developer + "/" + repo_name; 
+repo_full_name = developer + "/" + repo_name;
 
 # Find this directory
 this_dir = subprocess.check_output(["brew", "--repo", repo_full_name]).strip("\n");
