@@ -28,7 +28,10 @@ if not docker:
 # build the Docker image
 # FIXME: need to be smarter about not rebuilding excessively
 my_image_tag = repo_full_name;
-subprocess.call([docker, "build", "--tag=" + my_image_tag, "."]);
+result = subprocess.call([docker, "build", "--tag=" + my_image_tag, "."]);
+if result != 0:
+    print "Error: Docker image did not build correctly.";
+    sys.exit(result);
 
 # FIXME: the command is WRONG
 subprocess.call([docker, "run", "-it", my_image_tag, "/bin/bash"]);
