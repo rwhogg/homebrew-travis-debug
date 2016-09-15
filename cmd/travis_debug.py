@@ -11,6 +11,10 @@ import os;
 import subprocess;
 import sys;
 
+def error(msg):
+    print "Error: " + msg; 
+    sys.exit(1);
+
 developer = "rwhogg";
 repo_name = "homebrew-travis-debug";
 repo_full_name = developer + "/" + repo_name;
@@ -22,8 +26,7 @@ os.chdir(this_dir);
 # check to make sure docker is available
 docker = find_executable("docker");
 if not docker:
-    print "Error: please run \"brew install docker\""
-    sys.exit(1);
+    error("please run \"brew install docker\"");
 
 # build the Docker image
 # FIXME: need to be smarter about not rebuilding excessively
