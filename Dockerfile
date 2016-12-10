@@ -3,7 +3,7 @@ MAINTAINER Bob W. Hogg <rwhogg@linux.com>
 
 # Shamlessly taken from the Linuxbrew .travis.yml
 
-RUN sudo apt-get -qq update && sudo apt-get install -y libxml-parser-perl && sudo apt-get remove -y libncurses5-dev libtinfo-dev
+RUN sudo apt-get -qq update && sudo apt-get install -y libxml-parser-perl libxml-sax-perl && sudo apt-get remove -y libncurses5-dev libtinfo-dev
 
 # Got to the right place
 RUN useradd -ms /bin/bash linuxbrew
